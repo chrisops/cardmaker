@@ -1,0 +1,49 @@
+$activeColor: #d88b83;
+
+@media screen and (min-width: 1024px){
+  .bd-navbar {
+      padding: 1rem 2rem;
+  }
+}
+
+.navbar {
+  font-weight: 700
+}
+
+.mr-1-5 {
+  margin-right: 0.375rem;
+}
+
+a.navbar-item {
+  border-radius: 0.375rem;
+  margin: 0 0.375rem;
+}
+
+a.navbar-item.is-active {
+  color: $activeColor;
+  border-radius: 0.375rem;
+  border: 1px solid $activeColor;
+}
+
+.navbar-item:hover > .nav-icon {
+	backface-visibility: visible !important;
+	animation: flip 1s ease;
+}
+@keyframes flip {
+	0% {
+		transform: perspective(400px) rotateY(0);
+		animation-timing-function: ease-out;
+	}
+	30% {
+		transform: perspective(400px) rotateY(190deg);
+		animation-timing-function: ease-out;
+	}
+	80% {
+		transform: perspective(400px) rotateY(360deg);
+		animation-timing-function: ease-in;
+	}
+	100% {
+		transform: perspective(400px) scale(1);
+		animation-timing-function: linear;
+	}
+}
