@@ -5,9 +5,9 @@ import decksIcon from 'assets/decksIcon.png'
 import cardsIcon from 'assets/cardsIcon.png'
 import setsIcon from 'assets/setsIcon.png'
 import NavLink from './NavLink'
+import { Link } from 'react-router-dom';
 
 export default function NavBar() {
-  const currentPath = window.location.pathname
   const icons = {
     sets: setsIcon,
     decks: decksIcon,
@@ -24,9 +24,9 @@ export default function NavBar() {
   return (
     <nav class="bd-navbar navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand mr-2">
-        <a class="navbar-item" href="/">
+        <Link class="navbar-item" href="/">
           <img src={logo} />
-        </a>
+        </Link>
 
         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
           <span aria-hidden="true"></span>

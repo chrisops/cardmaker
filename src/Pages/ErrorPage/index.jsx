@@ -6,9 +6,15 @@ export default function ErrorPage() {
   console.error(error)
 
   return (
-    <div class="container">
-      <h1 class="title">Error</h1>
-      <p class="subtitle">{error.statusText || error.message}</p>
+    <div class="section">
+      <div class="container">
+        <div class="p-6 columns is-centered">
+          <h1 class="title is-1">{error.status} - {error.statusText || error.message}</h1>
+        </div>
+        <div class="columns is-centered">
+          <h2 class="title is-2">{error.data.replace(/Error: /, "")}</h2>
+        </div>
+      </div>
     </div>
   )
 }

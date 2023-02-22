@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import _ from 'lodash'
 
 export default function NavLink(props) {
@@ -12,7 +13,7 @@ export default function NavLink(props) {
   const active = props.activePath === props.path
 
   return (
-    <a class={`navbar-item ${props.activePath === props.path && 'is-active'}`} href={`/${props.path}`}
+    <Link to={props.path} class={`navbar-item ${props.activePath === props.path && 'is-active'}`} href={`/${props.path}`}
       onClick={() => props.setActivePath(props.path)}
       onMouseEnter={animateOnHover}
     >
@@ -20,6 +21,6 @@ export default function NavLink(props) {
         onAnimationEnd={endAnimation}
       />
       {_.capitalize(props.path)}
-    </a>
+    </Link>
   )
 }
