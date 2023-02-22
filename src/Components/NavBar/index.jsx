@@ -1,9 +1,9 @@
 import React from 'react'
-import logo from '../assets/logo.jpg'
+import logo from 'assets/logo.jpg'
 import './styles.scss'
-import decksIcon from '../assets/decksIcon.png'
-import cardsIcon from '../assets/cardsIcon.png'
-import setsIcon from '../assets/setsIcon.png'
+import decksIcon from 'assets/decksIcon.png'
+import cardsIcon from 'assets/cardsIcon.png'
+import setsIcon from 'assets/setsIcon.png'
 import NavLink from './NavLink'
 
 export default function NavBar() {
