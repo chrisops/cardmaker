@@ -9,11 +9,11 @@ export default function Sets() {
     state.sets.length ? (
       <div>
         {state.sets.map(set => (
-          <div key={set.id}> nice </div>
+          <div key={set.id}>{set.name}</div>
         ))}
       </div>
     ) : (
-      <CreateSet />
+      <CreateSet dispatch={dispatch} />
     )
   )
 }

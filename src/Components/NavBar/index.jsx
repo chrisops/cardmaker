@@ -15,6 +15,7 @@ export default function NavBar() {
   }
   const [activePath, setActivePath] = React.useState("/")
   const navLinks = (path) => <NavLink
+    key={path}
     path={path}
     activePath={activePath}
     setActivePath={setActivePath}
@@ -22,27 +23,27 @@ export default function NavBar() {
   />
 
   return (
-    <nav class="bd-navbar navbar" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand mr-2">
-        <Link to="/" class="navbar-item">
+    <nav className="bd-navbar navbar" role="navigation" aria-label="main navigation">
+      <div className="navbar-brand mr-2">
+        <Link to="/" className="navbar-item">
           <img src={logo} />
         </Link>
 
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <a role="button" className="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
         </a>
       </div>
 
-      <div id="navbarBasicExample" class="navbar-menu">
-        <div class="navbar-start">
+      <div id="navbarBasicExample" className="navbar-menu">
+        <div className="navbar-start">
           {
             ["sets", "decks", "cards"].map(navLinks)
           }
         </div>
-        <div class="navbar-end">
-          <a class="navbar-item" href="#">
+        <div className="navbar-end">
+          <a className="navbar-item" href="#">
             Settings
           </a>
         </div>

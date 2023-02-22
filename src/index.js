@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Root from 'Pages/Root';
-import reportWebVitals from './reportWebVitals';
 import ErrorPage from './Pages/ErrorPage';
 import Sets from './Pages/Sets/index';
 import Decks from './Pages/Decks/index';

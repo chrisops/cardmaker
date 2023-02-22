@@ -14,7 +14,7 @@ export default function initialize() {
 }
 
 const setDefaultSettings = () => {
-  const currentSettings = JSON.parse(localStorage.getItem('Settings') || {})
+  const currentSettings = JSON.parse(localStorage.getItem('Settings') || "{}")
 
   localStorage.setItem('Settings', JSON.stringify(
     {...defaultSettings, ...currentSettings}

@@ -6,11 +6,14 @@ import { CollectionContext, collectionReducer } from './collectionContext';
 const initialState = {
   sets: JSON.parse(localStorage.getItem('Sets')) || [],
   decks: JSON.parse(localStorage.getItem('Decks')) || [],
-  cards: JSON.parse(localStorage.getItem('Cards')) || []
+  cards: JSON.parse(localStorage.getItem('Cards')) || [],
+  settings: JSON.parse(localStorage.getItem('Settings')) || {}
 }
 
 function Root() {
   const [state, dispatch] = React.useReducer(collectionReducer, initialState);
+  console.log("STATE: ", state)
+  console.log("LOCALSTORAGE: ", localStorage)
 
   return (
     <>
