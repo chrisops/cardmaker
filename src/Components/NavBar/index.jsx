@@ -24,7 +24,7 @@ export default function NavBar() {
   return (
     <nav class="bd-navbar navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand mr-2">
-        <Link class="navbar-item" href="/">
+        <Link to="/" class="navbar-item">
           <img src={logo} />
         </Link>
 

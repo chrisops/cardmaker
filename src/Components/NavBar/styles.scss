@@ -35,15 +35,15 @@ a.navbar-item.is-active {
 }
 @keyframes flip {
 	0% {
-		transform: perspective(400px) rotateY(0);
+		transform: perspective(400px) rotateX(0);
 		animation-timing-function: ease-out;
 	}
-	20% {
-		transform: perspective(400px) rotateY(190deg);
+	10% {
+		transform: perspective(400px) rotateX(65deg);
 		animation-timing-function: ease-out;
 	}
 	100% {
-		transform: perspective(400px) rotateY(360deg);
+		transform: perspective(400px) rotateX(0deg);
 		animation-timing-function: ease-in;
 	}
 }
