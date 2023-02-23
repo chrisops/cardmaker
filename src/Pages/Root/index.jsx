@@ -12,8 +12,8 @@ const initialState = {
 
 function Root() {
   const [state, dispatch] = React.useReducer(collectionReducer, initialState);
-  console.log("STATE: ", state)
-  console.log("LOCALSTORAGE: ", localStorage)
+  // console.log("STATE: ", state)
+  // console.log("LOCALSTORAGE: ", localStorage)
 
   return (
     <>
